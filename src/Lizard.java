@@ -7,6 +7,10 @@ public class Lizard extends Pet
         super(name,age,weight);
         this.species = species;
     }//end all arg constr with call to super
+    public String Speak()
+    {
+        return "Hiss";
+    }//end speak from parent
     public String toString()
     {
         String output = super.toString();

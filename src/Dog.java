@@ -7,6 +7,13 @@ public class Dog extends Pet
         super(name,age,weight);
         this.breed = breed;
     }//end all arg constr will call to super
+    public String Speak()
+    {
+        if(this.age<2)
+            return "Yip";
+        else
+            return "Bark";
+    }//end speak from parent
     public String toString()
     {
         String output =super.toString()+"\nBreed: "+breed;

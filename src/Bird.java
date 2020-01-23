@@ -11,6 +11,10 @@ public class Bird extends Pet
         this.wingspan =wingspan;
         this.species = species;
     }//end all arg constr with call to super
+    public String Speak()
+    {
+        return "Chirp";
+    }//end speak from parent
     public String toString()
     {
         String output = super.toString();
