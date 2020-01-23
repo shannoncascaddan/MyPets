@@ -11,7 +11,28 @@ public abstract class Pet
         this.weight = weight;
     }//end all arg constr
 
+    public String getName()
+    {
+        return name;
+    }//age name
+    public double getAge()
+    {
+        return age;
+    }//get age
+    public double getWeight()
+    {
+        return weight;
+    }//get weight
+    public void setName(String name)
+    {
+        this.name = name;
+    }//see name
+
     abstract public String Speak();//to be overriden in all child classes
+    public double toLBS()
+    {
+        return weight *2.205;
+    }//end method to convert to LBS
 
     public String toString()
     {
