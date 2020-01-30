@@ -4,13 +4,15 @@ public abstract class Pet
     protected String name;
     protected int age;
     protected double weight;//kg
-    DecimalFormat fmt = new DecimalFormat("#.#");//to format weight in lbs
+    DecimalFormat fmt = new DecimalFormat(".#");//to format weight in lbs
+    public String food;
 
-    public Pet(String name, int age, double weight)
+    public Pet(String name, int age, double weight, String food)
     {
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.food = food;
     }//end all arg constr
 
     public String getName()
@@ -31,6 +33,7 @@ public abstract class Pet
     }//see name
 
     abstract public String Speak();//to be overriden in all child classes
+    abstract public int monthlyFeeding();//to be overriden in all child classes
     public double toLBS()
     {
         return weight *2.205;
@@ -41,8 +44,7 @@ public abstract class Pet
         String output = "Name: "+name;
         output+="\nAge: "+age;
         output+="\nWeight: "+weight+" kg"+"("+fmt.format(toLBS())+" in pounds)";
-
-
+        output+="\nFood: "+food;
         return output;
     }//to string
 }//end class pat
